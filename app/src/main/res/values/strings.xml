@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">TesteTileView</string>
+
+    <!--echo create half-sized versions for tiling (will be discarded later)-->
+    <!--magick image.png -resize 50%%  image-500.png-->
+    <!--magick image.png -resize 25%%  image-250.png-->
+    <!--magick image.png -resize 12.5%%  image-125.png-->
+    <!--magick -limit map 0 -limit memory 0 image.png -crop 256x256 -set filename:tile "%[fx:page.x/256]_%[fx:page.y/256]" +repage +adjoin tile-%[filename:tile].png-->
+    <!--magick -limit map 0 -limit memory 0 image-125.png -crop 256x256 -set filename:tile "%[fx:page.x/256]_%[fx:page.y/256]" +repage +adjoin tile-%[filename:tile].png-->
+    <!--magick -limit map 0 -limit memory 0 image-250.png -crop 256x256 -set filename:tile "%[fx:page.x/256]_%[fx:page.y/256]" +repage +adjoin tile-%[filename:tile].png-->
+    <!--magick -limit map 0 -limit memory 0 image-500.png -crop 256x256 -set filename:tile "%[fx:page.x/256]_%[fx:page.y/256]" +repage +adjoin tile-%[filename:tile].png-->
+
+    <!--echo cleanup-->
+    <!--del image-500.png-->
+    <!--del image-250.png-->
+    <!--del image-125.png-->
+
 </resources>
